@@ -35,6 +35,101 @@ body {
   font-size: 1.8rem;
   font-family: 'Public Sans', sans-serif; }
 
+.header {
+  width: 80%;
+  margin: auto;
+  height: 14rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem; }
+  .header__logo {
+    width: 15rem; }
+  .header__menu {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center; }
+    .header__menu__menu-item {
+      list-style: none;
+      text-transform: uppercase; }
+      .header__menu__menu-item:hover {
+        border-bottom: 1px solid #31d35c; }
+      .header__menu__menu-item:not(:last-child) {
+        margin-right: 4rem; }
+      @media (max-width: 600px) {
+        .header__menu__menu-item {
+          font-size: 1.9rem;
+          display: none; }
+          .header__menu__menu-item:not(:last-child) {
+            margin-right: 6rem; } }
+
+#nav-button {
+  display: none; }
+  @media (max-width: 600px) {
+    #nav-button {
+      display: block; } }
+
+.hero {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 12rem;
+  position: relative; }
+  @media (max-width: 600px) {
+    .hero {
+      flex-direction: column-reverse;
+      width: 90%; } }
+  .hero__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background: url(/images/bg-intro-desktop.svg) no-repeat top center;
+    background-size: contain;
+    position: relative;
+    overflow: hidden; }
+    @media (max-width: 600px) {
+      .hero__right {
+        margin-bottom: 5rem; } }
+  .hero__headline {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    font-weight: 500; }
+    @media (max-width: 600px) {
+      .hero__headline {
+        font-size: 3.5rem;
+        text-align: center;
+        font-weight: 400; } }
+  .hero__text {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    color: #9698a6; }
+    @media (max-width: 600px) {
+      .hero__text {
+        text-align: center; } }
+  .hero__left {
+    flex: 1; }
+    @media (max-width: 600px) {
+      .hero__left {
+        margin-bottom: 6rem; } }
+
+.second {
+  background-color: #fafafa;
+  padding: 5rem 4rem; }
+
+.row {
+  display: flex; }
+
+.card {
+  width: 23%;
+  padding: 3rem 2rem; }
+  .card__image {
+    width: 10rem;
+    margin-bottom: 2rem; }
+  .card__title {
+    margin-bottom: 2rem; }
+
 .attribution {
   font-size: 11px;
   text-align: center; }

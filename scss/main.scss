@@ -74,6 +74,138 @@ body {
   font-size: 1.8rem;
   font-family: 'Public Sans', sans-serif;
 }
+
+.header {
+  width: 80%;
+  margin: auto;
+  height: 14rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  @include respond(phonr) {
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+
+  &__logo {
+    width: 15rem;
+  }
+
+  &__menu {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+
+    &__menu-item {
+      list-style: none;
+      text-transform: uppercase;
+      &:hover {
+        border-bottom: 1px solid $limeGreen;
+      }
+
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+
+      @include respond(phone) {
+        font-size: 1.9rem;
+
+        display: none;
+
+        &:not(:last-child) {
+          margin-right: 6rem;
+        }
+      }
+    }
+  }
+}
+
+#nav-button {
+  display: none;
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.hero {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 12rem;
+  position: relative;
+
+  @include respond(phone) {
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    background: url(/images/bg-intro-desktop.svg) no-repeat top center;
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+    @include respond(phone) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__headline {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+
+    @include respond(phone) {
+      font-size: 3.5rem;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    color: $grayishBlue;
+    @include respond(phone) {
+      text-align: center;
+    }
+  }
+
+  &__left {
+    flex: 1;
+    @include respond(phone) {
+      margin-bottom: 6rem;
+    }
+  }
+}
+
+.second {
+  background-color: $veryLightGray;
+  padding: 5rem 4rem;
+}
+
+.row {
+  display: flex;
+}
+
+.card {
+  width: 23%;
+  padding: 3rem 2rem;
+  &__image {
+    width: 10rem;
+    margin-bottom: 2rem;
+  }
+  &__title {
+    margin-bottom: 2rem;
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
