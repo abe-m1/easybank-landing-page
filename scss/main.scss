@@ -73,12 +73,13 @@ html {
 body {
   font-size: 1.8rem;
   font-family: 'Public Sans', sans-serif;
+  background-color: $veryLightGray;
 }
 
 .header {
   width: 80%;
   margin: auto;
-  height: 14rem;
+  height: 9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,10 +130,18 @@ body {
   }
 }
 
+.button-gradient {
+  background-image: linear-gradient(to right, $limeGreen, $brightCyan);
+  padding: 1.5rem 3rem;
+  border: none;
+  color: $white;
+  border-radius: 3rem;
+}
+
 .hero {
   display: flex;
-  width: 80%;
-  margin: auto;
+  // width: 80%;
+  // margin: auto;
   margin-bottom: 12rem;
   position: relative;
 
@@ -148,7 +157,7 @@ body {
     justify-content: center;
     flex: 1;
     background: url(/images/bg-intro-desktop.svg) no-repeat top center;
-    background-size: contain;
+    background-size: cover;
     position: relative;
     overflow: hidden;
     @include respond(phone) {
@@ -179,15 +188,36 @@ body {
 
   &__left {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
     @include respond(phone) {
       margin-bottom: 6rem;
     }
   }
+
+  &__container {
+    margin-top: 12rem;
+    width: 50%;
+  }
 }
 
+.image-container {
+  position: relative;
+  top: -12rem;
+  right: -56px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
 .second {
-  background-color: $veryLightGray;
-  padding: 5rem 4rem;
+  background-color: $lightGrayishBlue;
+  padding-top: 12rem;
+  padding-bottom: 7rem;
+  margin-top: -20rem;
 }
 
 .row {
@@ -204,6 +234,26 @@ body {
   &__title {
     margin-bottom: 2rem;
   }
+}
+
+.articles {
+  display: flex;
+}
+
+.article {
+  background-color: $white;
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+
+.footer {
+  background-color: $darkBlue;
+  color: $white;
+}
+
+.footer-logo {
+  width: 15rem;
 }
 
 .attribution {
