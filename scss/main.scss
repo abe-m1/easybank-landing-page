@@ -103,8 +103,8 @@ body {
       align-self: stretch;
       list-style: none;
       text-transform: uppercase;
-      padding-bottom: 4rem;
-      padding-top: 4rem;
+      padding-bottom: 3rem;
+      padding-top: 3rem;
       border-bottom: 2px solid transparent;
       &:hover {
         border-bottom: 2px solid $limeGreen;
@@ -155,7 +155,7 @@ body {
 
   @include respond(phone) {
     flex-direction: column-reverse;
-    width: 90%;
+    width: 100%;
   }
 
   &__right {
@@ -169,24 +169,25 @@ body {
     position: relative;
     overflow: hidden;
     @include respond(phone) {
-      margin-bottom: 5rem;
+      // margin-bottom: 5rem;
     }
   }
 
   &__headline {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
     margin-bottom: 2rem;
     font-weight: 500;
 
     @include respond(phone) {
-      font-size: 3.5rem;
+      font-size: 4.5rem;
       text-align: center;
       font-weight: 400;
     }
   }
 
   &__text {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
     margin-bottom: 4rem;
     color: $grayishBlue;
     @include respond(phone) {
@@ -201,13 +202,19 @@ body {
     // align-items: center;
 
     @include respond(phone) {
-      margin-bottom: 6rem;
+      // margin-bottom: 6rem;
     }
   }
 
   &__container {
     margin-top: 12rem;
-    width: 50%;
+    width: 60%;
+
+    @include respond(phone) {
+      text-align: center;
+      width: 100%;
+      margin-top: -9rem;
+    }
   }
 }
 
@@ -215,29 +222,56 @@ body {
   position: relative;
   top: -12rem;
   right: -119px;
+
+  @include respond(phone) {
+    text-align: center;
+    top: -14rem;
+    right: 0;
+  }
+}
+
+.image-container img {
+  width: 108%;
+  @include respond(phone) {
+    width: 85%;
+  }
 }
 
 .container {
   width: 80%;
   margin: auto;
+
+  @include respond(phone) {
+    width: 100%;
+  }
 }
 .second {
   background-color: $lightGrayishBlue;
-  padding-top: 12rem;
-  padding-bottom: 7rem;
-  margin-top: -23rem;
-  margin-bottom: 10rem;
+  padding-top: 10.5rem;
+  padding-bottom: 5rem;
+  margin-top: -28rem;
+  margin-bottom: 8rem;
+
+  @include respond(phone) {
+    margin-top: 5rem;
+  }
 
   &__headline {
     font-weight: 400;
-    font-size: 3.6rem;
-    margin-bottom: 2rem;
+    font-size: 3.7rem;
+    margin-bottom: 2.2rem;
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 
   &__text {
     width: 60%;
     line-height: 1.7;
     margin-bottom: 4rem;
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 }
 
@@ -250,14 +284,14 @@ body {
 }
 
 .card {
-  width: 23%;
+  // width: 25%;
   padding: 3rem 2rem;
   &__image {
-    width: 8rem;
+    width: 7.7rem;
     margin-bottom: 4rem;
   }
   &__title {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-weight: 400;
     font-size: 2.4rem;
   }
@@ -266,13 +300,19 @@ body {
     margin-bottom: 2rem;
     font-weight: 400;
     font-size: 1.7rem;
+    line-height: 1.4;
+
+    @include respond(phone) {
+      margin-bottom: 0;
+    }
   }
 
   @include respond(phone) {
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-bottom: 3rem;
     text-align: center;
+    padding: 1rem 0;
   }
 }
 
@@ -286,17 +326,30 @@ body {
 }
 
 .articles-headline {
-  font-size: 3rem;
+  font-size: 3.8rem;
   font-weight: 400;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
 .article__img {
-  background: url(/images/image-currency.jpg) no-repeat top center;
-  background-size: contain;
-  height: 163px;
+  height: 190px;
   width: 100%;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-size: fit;
+
+  &--1 {
+    background: url(/images/image-currency.jpg) no-repeat;
+  }
+  &--2 {
+    background: url(/images/image-restaurant.jpg) no-repeat;
+  }
+  &--3 {
+    background: url(/images/image-plane.jpg) no-repeat;
+  }
+  &--4 {
+    background: url(/images/image-currency.jpg) no-repeat top center;
+  }
 }
 
 .article {
@@ -310,11 +363,13 @@ body {
   &__image {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    height: 200px;
+    margin-bottom: 0.6rem;
   }
 
   &__author {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.6rem;
   }
 
   &__container {
@@ -323,18 +378,20 @@ body {
 
   &__title {
     color: $darkBlue;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
+    width: 90%;
   }
 
   &__details {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    line-height: 1.4;
     font-weight: 400;
   }
 
   @include respond(phone) {
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-bottom: 3rem;
   }
@@ -343,10 +400,46 @@ body {
 .footer {
   background-color: $darkBlue;
   color: $white;
+
+  padding: 5rem 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-items li {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.column-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer-logo {
   width: 15rem;
+}
+
+ion-icon {
+  font-size: 25px;
+  color: #fff;
+
+  &:not(:last-of-type) {
+    margin-left: 1rem;
+  }
+
+  // &:hover {
+  //   color: $softRed;
+  // }
+
+  @include respond(phone) {
+    font-size: 30px;
+  }
 }
 
 .close {
