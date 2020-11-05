@@ -36,13 +36,15 @@ body {
   font-family: 'Public Sans', sans-serif;
   background-color: #fafafa; }
 
+.header-container {
+  background-color: white; }
+
 .header {
   width: 80%;
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: white; }
+  align-items: center; }
   @media (max-width: 900px) {
     .header {
       padding: 4rem;
@@ -56,12 +58,15 @@ body {
     .header__menu__menu-item {
       align-self: stretch;
       list-style: none;
-      text-transform: uppercase;
       padding-bottom: 3rem;
+      color: #9698a6;
       padding-top: 3rem;
-      border-bottom: 2px solid transparent; }
+      border: 3px solid transparent; }
       .header__menu__menu-item:hover {
-        border-bottom: 2px solid #31d35c; }
+        border-style: solid;
+        color: #2d314d;
+        border-width: 3px;
+        border-image: linear-gradient(to left, #31d35c, #2bb7da) 0 0 100% 0/0 0 4px 0; }
       .header__menu__menu-item:not(:last-child) {
         margin-right: 4rem; }
       @media (max-width: 900px) {
@@ -85,10 +90,12 @@ body {
 
 .button-gradient {
   background-image: linear-gradient(to right, #31d35c, #2bb7da);
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 4rem;
   border: none;
   color: white;
   border-radius: 3rem; }
+  .button-gradient:hover {
+    opacity: 0.6; }
 
 .hero {
   display: flex;
@@ -103,7 +110,7 @@ body {
     align-items: center;
     justify-content: center;
     flex: 1;
-    background: url(/images/bg-intro-desktop.svg) no-repeat 30% 602%;
+    background: url(/images/bg-intro-desktop.svg) no-repeat 19% 602%;
     background-size: 142% 104%;
     position: relative;
     overflow: hidden; }
@@ -186,7 +193,8 @@ body {
   .second__text {
     width: 60%;
     line-height: 1.7;
-    margin-bottom: 4rem; }
+    margin-bottom: 4rem;
+    color: #9698a6; }
     @media (max-width: 900px) {
       .second__text {
         width: 80%;
@@ -269,6 +277,7 @@ body {
   .article__image {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    height: 20rem;
     margin-bottom: 0.6rem; }
   .article__author {
     font-size: 1.2rem;
@@ -281,6 +290,8 @@ body {
     font-weight: 400;
     margin-bottom: 1.5rem;
     width: 90%; }
+    .article__title:hover {
+      color: #31d35c; }
   .article__details {
     font-size: 1.3rem;
     line-height: 1.4;
@@ -307,6 +318,9 @@ body {
 .footer-items li:not(:last-child) {
   margin-bottom: 2rem; }
 
+.footer-items li:hover {
+  color: #31d35c; }
+
 @media (max-width: 900px) {
   .footer-items li {
     margin-bottom: 3rem; } }
@@ -330,6 +344,8 @@ ion-icon {
   color: #fff; }
   ion-icon:not(:last-of-type) {
     margin-left: 1rem; }
+  ion-icon:hover {
+    color: #31d35c; }
   @media (max-width: 900px) {
     ion-icon {
       font-size: 30px; } }

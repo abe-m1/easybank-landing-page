@@ -76,6 +76,10 @@ body {
   background-color: $veryLightGray;
 }
 
+.header-container {
+  background-color: $white;
+}
+
 .header {
   width: 80%;
   margin: auto;
@@ -83,7 +87,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: $white;
 
   @include respond(tab-port) {
     padding: 4rem;
@@ -102,12 +105,18 @@ body {
     &__menu-item {
       align-self: stretch;
       list-style: none;
-      text-transform: uppercase;
       padding-bottom: 3rem;
+      color: $grayishBlue;
       padding-top: 3rem;
-      border-bottom: 2px solid transparent;
+      border: 3px solid transparent;
+
       &:hover {
-        border-bottom: 2px solid $limeGreen;
+        border-style: solid;
+        color: $darkBlue;
+        border-width: 3px;
+        border-image: linear-gradient(to left, $limeGreen, $brightCyan) 0 0 100%
+          0/0 0 4px 0;
+        // border-bottom: 4px solid $limeGreen;
       }
 
       &:not(:last-child) {
@@ -143,10 +152,14 @@ body {
 
 .button-gradient {
   background-image: linear-gradient(to right, $limeGreen, $brightCyan);
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 4rem;
   border: none;
   color: $white;
   border-radius: 3rem;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .hero {
@@ -164,7 +177,7 @@ body {
     align-items: center;
     justify-content: center;
     flex: 1;
-    background: url(/images/bg-intro-desktop.svg) no-repeat 30% 602%;
+    background: url(/images/bg-intro-desktop.svg) no-repeat 19% 602%;
     background-size: 142% 104%;
     position: relative;
     overflow: hidden;
@@ -273,6 +286,7 @@ body {
     width: 60%;
     line-height: 1.7;
     margin-bottom: 4rem;
+    color: $grayishBlue;
     @include respond(tab-port) {
       width: 80%;
       margin: auto;
@@ -381,7 +395,7 @@ body {
   &__image {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    // height: 200px;
+    height: 20rem;
     margin-bottom: 0.6rem;
   }
 
@@ -400,6 +414,10 @@ body {
     font-weight: 400;
     margin-bottom: 1.5rem;
     width: 90%;
+
+    &:hover {
+      color: $limeGreen;
+    }
   }
 
   &__details {
@@ -437,6 +455,10 @@ body {
     margin-bottom: 2rem;
   }
 
+  &:hover {
+    color: $limeGreen;
+  }
+
   @include respond(tab-port) {
     margin-bottom: 3rem;
   }
@@ -468,9 +490,9 @@ ion-icon {
     margin-left: 1rem;
   }
 
-  // &:hover {
-  //   color: $softRed;
-  // }
+  &:hover {
+    color: $limeGreen;
+  }
 
   @include respond(tab-port) {
     font-size: 30px;
