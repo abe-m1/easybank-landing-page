@@ -83,7 +83,6 @@ body {
 .header {
   width: 80%;
   margin: auto;
-  // padding: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -116,7 +115,6 @@ body {
         border-width: 3px;
         border-image: linear-gradient(to left, $limeGreen, $brightCyan) 0 0 100%
           0/0 0 4px 0;
-        // border-bottom: 4px solid $limeGreen;
       }
 
       &:not(:last-child) {
@@ -213,11 +211,6 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
-    // align-items: center;
-
-    @include respond(tab-port) {
-      // margin-bottom: 6rem;
-    }
   }
 
   &__container {
@@ -304,7 +297,6 @@ body {
 }
 
 .card {
-  // width: 25%;
   padding: 3rem 2rem;
   &__image {
     width: 7.7rem;
@@ -359,27 +351,6 @@ body {
     width: 80%;
     margin: auto;
     margin-bottom: 5rem;
-  }
-}
-
-.article__img {
-  // height: 190px;
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background-size: fit;
-
-  &--1 {
-    background: url(/images/image-currency.jpg) no-repeat;
-  }
-  &--2 {
-    background: url(/images/image-restaurant.jpg) no-repeat;
-  }
-  &--3 {
-    background: url(/images/image-plane.jpg) no-repeat;
-  }
-  &--4 {
-    background: url(/images/image-currency.jpg) no-repeat top center;
   }
 }
 

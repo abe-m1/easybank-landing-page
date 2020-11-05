@@ -254,20 +254,6 @@ body {
       margin: auto;
       margin-bottom: 5rem; } }
 
-.article__img {
-  width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background-size: fit; }
-  .article__img--1 {
-    background: url(/images/image-currency.jpg) no-repeat; }
-  .article__img--2 {
-    background: url(/images/image-restaurant.jpg) no-repeat; }
-  .article__img--3 {
-    background: url(/images/image-plane.jpg) no-repeat; }
-  .article__img--4 {
-    background: url(/images/image-currency.jpg) no-repeat top center; }
-
 .article {
   background-color: white;
   color: #9698a6;
