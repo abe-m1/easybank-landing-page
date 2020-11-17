@@ -8,5 +8,5 @@ navButton.addEventListener('click', (e) => {
   document.querySelector('.nav-container').classList.toggle('show');
 
   //when modal open, set content to fixed so it can't be scrolled
-  document.querySelector('.content').classList.toggle('fix');
+  // document.querySelector('.content').classList.toggle('fix');
 });

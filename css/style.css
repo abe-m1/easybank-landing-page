@@ -18,13 +18,13 @@ a {
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 600px) {
+  @media (min-width: 600px) {
     html {
       font-size: 50%; } }
-  @media (max-width: 1200px) {
+  @media (min-width: 1200px) {
     html {
       font-size: 50%; } }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     html {
       font-size: 56.25%; } }
   @media (min-width: 1800px) {
@@ -40,28 +40,29 @@ body {
   background-color: white; }
 
 .header {
-  width: 80%;
-  margin: auto;
+  padding: 4rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     .header {
-      padding: 4rem;
-      width: 100%; } }
+      width: 80%;
+      margin: auto; } }
   .header__logo {
     width: 15rem; }
   .header__menu {
-    font-size: 1.4rem;
-    display: flex;
-    align-items: center; }
+    font-size: 1.9rem;
+    display: none; }
     .header__menu__menu-item {
-      align-self: stretch;
       list-style: none;
       padding-bottom: 3rem;
       color: #9698a6;
       padding-top: 3rem;
       border: 3px solid transparent; }
+      @media (min-width: 900px) {
+        .header__menu__menu-item {
+          align-self: stretch; } }
       .header__menu__menu-item:hover {
         border-style: solid;
         color: #2d314d;
@@ -69,24 +70,25 @@ body {
         border-image: linear-gradient(to left, #31d35c, #2bb7da) 0 0 100% 0/0 0 4px 0; }
       .header__menu__menu-item:not(:last-child) {
         margin-right: 4rem; }
-      @media (max-width: 900px) {
+      @media (min-width: 900px) {
         .header__menu__menu-item {
-          font-size: 1.9rem;
-          display: none; }
+          font-size: 1.4rem;
+          display: flex;
+          align-items: center; }
           .header__menu__menu-item:not(:last-child) {
             margin-right: 6rem; } }
 
 #nav-button {
-  display: none; }
-  @media (max-width: 900px) {
+  display: block; }
+  @media (min-width: 900px) {
     #nav-button {
-      display: block; } }
+      display: none; } }
 
 .header-button {
-  display: block; }
-  @media (max-width: 900px) {
+  display: none; }
+  @media (min-width: 900px) {
     .header-button {
-      display: none; } }
+      display: block; } }
 
 .button-gradient {
   background-image: linear-gradient(to right, #31d35c, #2bb7da);
@@ -99,10 +101,11 @@ body {
 
 .hero {
   display: flex;
-  position: relative; }
-  @media (max-width: 900px) {
+  position: relative;
+  flex-direction: column-reverse; }
+  @media (min-width: 900px) {
     .hero {
-      flex-direction: column-reverse;
+      flex-direction: row;
       width: 100%; } }
   .hero__right {
     display: flex;
@@ -110,19 +113,19 @@ body {
     align-items: center;
     justify-content: center;
     flex: 1;
-    background: url(/images/bg-intro-desktop.svg) no-repeat 19% 602%;
-    background-size: 142% 104%;
+    background: url(/images/bg-intro-mobile.svg) no-repeat 15% 602%;
+    background-size: 177% 107%;
     position: relative;
     overflow: hidden; }
-    @media (max-width: 900px) {
+    @media (min-width: 900px) {
       .hero__right {
-        background: url(/images/bg-intro-desktop.svg) no-repeat 15% 602%;
-        background-size: 177% 107%; } }
+        background: url(/images/bg-intro-desktop.svg) no-repeat 19% 602%;
+        background-size: 142% 104%; } }
   .hero__headline {
     font-size: 5.5rem;
     margin-bottom: 2rem;
     font-weight: 500; }
-    @media (max-width: 900px) {
+    @media (min-width: 900px) {
       .hero__headline {
         font-size: 4.5rem;
         text-align: center;
@@ -132,7 +135,7 @@ body {
     line-height: 1.5;
     margin-bottom: 4rem;
     color: #9698a6; }
-    @media (max-width: 900px) {
+    @media (min-width: 900px) {
       .hero__text {
         text-align: center; } }
   .hero__left {
@@ -140,34 +143,34 @@ body {
     display: flex;
     justify-content: center; }
   .hero__container {
-    margin-top: 12rem;
-    width: 60%; }
-    @media (max-width: 900px) {
+    text-align: center;
+    width: 100%;
+    margin-top: -9rem; }
+    @media (min-width: 900px) {
       .hero__container {
-        text-align: center;
-        width: 100%;
-        margin-top: -9rem; } }
+        margin-top: 12rem;
+        width: 60%; } }
 
 .image-container {
-  position: relative;
-  top: -12rem;
-  right: -119px; }
-  @media (max-width: 900px) {
+  text-align: center;
+  top: -14rem;
+  right: 0;
+  position: relative; }
+  @media (min-width: 900px) {
     .image-container {
-      text-align: center;
-      top: -14rem;
-      right: 0; } }
+      top: -12rem;
+      right: -119px; } }
 
 .image-container img {
   width: 108%; }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     .image-container img {
       width: 85%; } }
 
 .container {
   width: 80%;
   margin: auto; }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     .container {
       width: 100%; } }
 
@@ -175,16 +178,16 @@ body {
   background-color: #f3f4f6;
   padding-top: 10.5rem;
   padding-bottom: 5rem;
-  margin-top: -28rem;
+  margin-top: 5rem;
   margin-bottom: 8rem; }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     .second {
-      margin-top: 5rem; } }
+      margin-top: -28rem; } }
   .second__headline {
     font-weight: 400;
     font-size: 3.7rem;
     margin-bottom: 2.2rem; }
-    @media (max-width: 900px) {
+    @media (min-width: 900px) {
       .second__headline {
         text-align: center;
         width: 80%;
@@ -195,24 +198,24 @@ body {
     line-height: 1.7;
     margin-bottom: 4rem;
     color: #9698a6; }
-    @media (max-width: 900px) {
+    @media (min-width: 900px) {
       .second__text {
         width: 80%;
         margin: auto;
         margin-bottom: 4rem; } }
 
 .row {
-  display: flex; }
-  @media (max-width: 900px) {
+  display: block; }
+  @media (min-width: 900px) {
     .row {
-      display: block; } }
+      display: flex; } }
 
 .card {
   padding: 3rem 2rem; }
   .card__image {
     width: 7.7rem;
     margin-bottom: 4rem; }
-    @media (max-width: 900px) {
+    @media (min-width: 900px) {
       .card__image {
         margin-bottom: 1rem; } }
   .card__title {
@@ -225,10 +228,10 @@ body {
     font-weight: 400;
     font-size: 1.7rem;
     line-height: 1.4; }
-    @media (max-width: 900px) {
+    @media (min-width: 900px) {
       .card__details {
         margin-bottom: 0; } }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     .card {
       width: 100%;
       margin: auto;
@@ -237,18 +240,18 @@ body {
       padding: 1rem 0; } }
 
 .articles {
-  display: flex;
-  margin-bottom: 6rem; }
-  @media (max-width: 900px) {
+  display: block;
+  margin-bottom: 16rem; }
+  @media (min-width: 900px) {
     .articles {
-      display: block;
-      margin-bottom: 16rem; } }
+      display: flex;
+      margin-bottom: 6rem; } }
 
 .articles-headline {
   font-size: 3.8rem;
   font-weight: 400;
   margin-bottom: 5rem; }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     .articles-headline {
       width: 80%;
       margin: auto;
@@ -282,7 +285,7 @@ body {
     font-size: 1.3rem;
     line-height: 1.4;
     font-weight: 400; }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     .article {
       width: 80%;
       margin: auto;
@@ -295,11 +298,11 @@ body {
 
 .footer-container {
   display: flex;
-  justify-content: space-between; }
-  @media (max-width: 900px) {
+  flex-direction: column;
+  align-items: center; }
+  @media (min-width: 900px) {
     .footer-container {
-      flex-direction: column;
-      align-items: center; } }
+      justify-content: space-between; } }
 
 .footer-items li:not(:last-child) {
   margin-bottom: 2rem; }
@@ -307,7 +310,7 @@ body {
 .footer-items li:hover {
   color: #31d35c; }
 
-@media (max-width: 900px) {
+@media (min-width: 900px) {
   .footer-items li {
     margin-bottom: 3rem; } }
 
@@ -321,7 +324,7 @@ body {
 
 .footer-logo {
   width: 15rem; }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     .footer-logo {
       margin-bottom: 2rem; } }
 
@@ -332,7 +335,7 @@ ion-icon {
     margin-left: 1rem; }
   ion-icon:hover {
     color: #31d35c; }
-  @media (max-width: 900px) {
+  @media (min-width: 900px) {
     ion-icon {
       font-size: 30px; } }
 
