@@ -95,6 +95,7 @@ body {
   @include respond(tab-port) {
     width: 80%;
     margin: auto;
+    padding: 0;
   }
 
   &__logo {
@@ -104,6 +105,10 @@ body {
   &__menu {
     font-size: 1.9rem;
     display: none;
+
+    @include respond(tab-port) {
+      display: flex;
+    }
 
     &__menu-item {
       @include respond(tab-port) {
@@ -133,6 +138,11 @@ body {
         display: flex;
         align-items: center;
 
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+      @include respond(tab-land) {
         &:not(:last-child) {
           margin-right: 6rem;
         }
@@ -200,6 +210,10 @@ body {
     font-weight: 500;
 
     @include respond(tab-port) {
+      font-size: 3.5rem;
+    }
+
+    @include respond(tab-land) {
       font-size: 4.5rem;
       text-align: center;
       font-weight: 400;
@@ -207,12 +221,18 @@ body {
   }
 
   &__text {
+    width: 80%;
+    margin: auto;
     font-size: 1.8rem;
     line-height: 1.5;
     margin-bottom: 4rem;
     color: $grayishBlue;
     @include respond(tab-port) {
+      line-height: 1.2;
+    }
+    @include respond(tab-land) {
       text-align: center;
+      line-height: 1.5;
     }
   }
 
@@ -228,6 +248,10 @@ body {
     margin-top: -9rem;
 
     @include respond(tab-port) {
+      margin-top: 10rem;
+      width: 70%;
+    }
+    @include respond(tab-land) {
       margin-top: 12rem;
       width: 60%;
     }
@@ -269,30 +293,35 @@ body {
   margin-bottom: 8rem;
 
   @include respond(tab-port) {
+    margin-top: -12rem;
+  }
+
+  @include respond(tab-land) {
     margin-top: -28rem;
   }
 
   &__headline {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2.2rem;
     font-weight: 400;
     font-size: 3.7rem;
-    margin-bottom: 2.2rem;
+
     @include respond(tab-port) {
-      text-align: center;
-      width: 80%;
-      margin: auto;
-      margin-bottom: 2.2rem;
     }
   }
 
   &__text {
-    width: 60%;
+    width: 80%;
+    margin: auto;
+
     line-height: 1.7;
-    margin-bottom: 4rem;
+    text-align: center;
     color: $grayishBlue;
     @include respond(tab-port) {
-      width: 80%;
-      margin: auto;
-      margin-bottom: 4rem;
+      width: 60%;
+      margin-bottom: 2rem;
     }
   }
 }
@@ -301,17 +330,22 @@ body {
   display: block;
   @include respond(tab-port) {
     display: flex;
+    width: 90%;
+    margin: auto;
+    max-width: 1400px;
   }
 }
 
 .card {
   padding: 3rem 2rem;
+  text-align: center;
   &__image {
     width: 7.7rem;
-    margin-bottom: 4rem;
+
+    margin-bottom: 1rem;
 
     @include respond(tab-port) {
-      margin-bottom: 1rem;
+      margin-bottom: 4rem;
     }
   }
   &__title {
@@ -321,21 +355,21 @@ body {
   }
   &__details {
     color: $grayishBlue;
-    margin-bottom: 2rem;
+
+    margin-bottom: 0;
     font-weight: 400;
     font-size: 1.7rem;
     line-height: 1.4;
 
     @include respond(tab-port) {
-      margin-bottom: 0;
+      margin-bottom: 2rem;
     }
   }
 
   @include respond(tab-port) {
     width: 100%;
-    margin: auto;
+    // margin: auto;
     margin-bottom: 3rem;
-    text-align: center;
     padding: 1rem 0;
   }
 }
@@ -343,9 +377,13 @@ body {
 .articles {
   display: block;
   margin-bottom: 16rem;
-  @include respond(tab-port) {
+
+  @include respond(tab-land) {
+    width: 90%;
+    margin: auto;
     display: flex;
     margin-bottom: 6rem;
+    max-width: 1400px;
   }
 }
 
@@ -353,6 +391,7 @@ body {
   font-size: 3.8rem;
   font-weight: 400;
   margin-bottom: 5rem;
+  text-align: center;
 
   @include respond(tab-port) {
     width: 80%;
@@ -365,9 +404,21 @@ body {
   background-color: $white;
   color: $grayishBlue;
   border-radius: 10px;
+  margin-bottom: 6rem;
 
-  &:not(:last-child) {
-    margin-right: 3rem;
+  @include respond(phone) {
+    max-width: 425px;
+    margin: auto;
+    margin-bottom: 6rem;
+  }
+
+  @include respond(tab-port) {
+    margin-bottom: 6rem;
+  }
+  @include respond(tab-land) {
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
   }
 
   &__image {
@@ -407,7 +458,7 @@ body {
   @include respond(tab-port) {
     width: 80%;
     margin: auto;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -419,26 +470,30 @@ body {
 }
 
 .footer-container {
+  width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @include respond(tab-port) {
     justify-content: space-between;
+    flex-direction: row;
   }
 }
 
 .footer-items li {
-  &:not(:last-child) {
-    margin-bottom: 2rem;
-  }
+  margin-bottom: 3rem;
+  text-align: center;
 
   &:hover {
     color: $limeGreen;
   }
 
   @include respond(tab-port) {
-    margin-bottom: 3rem;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
   }
 }
 
@@ -454,10 +509,15 @@ body {
 
 .footer-logo {
   width: 15rem;
+  margin-bottom: 2rem;
 
   @include respond(tab-port) {
     margin-bottom: 2rem;
   }
+}
+
+.social {
+  margin-bottom: 2rem;
 }
 
 ion-icon {

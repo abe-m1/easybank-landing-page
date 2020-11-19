@@ -48,12 +48,16 @@ body {
   @media (min-width: 900px) {
     .header {
       width: 80%;
-      margin: auto; } }
+      margin: auto;
+      padding: 0; } }
   .header__logo {
     width: 15rem; }
   .header__menu {
     font-size: 1.9rem;
     display: none; }
+    @media (min-width: 900px) {
+      .header__menu {
+        display: flex; } }
     .header__menu__menu-item {
       list-style: none;
       padding-bottom: 3rem;
@@ -76,7 +80,10 @@ body {
           display: flex;
           align-items: center; }
           .header__menu__menu-item:not(:last-child) {
-            margin-right: 6rem; } }
+            margin-right: 3rem; } }
+      @media (min-width: 1200px) {
+        .header__menu__menu-item:not(:last-child) {
+          margin-right: 6rem; } }
 
 #nav-button {
   display: block; }
@@ -127,17 +134,26 @@ body {
     font-weight: 500; }
     @media (min-width: 900px) {
       .hero__headline {
+        font-size: 3.5rem; } }
+    @media (min-width: 1200px) {
+      .hero__headline {
         font-size: 4.5rem;
         text-align: center;
         font-weight: 400; } }
   .hero__text {
+    width: 80%;
+    margin: auto;
     font-size: 1.8rem;
     line-height: 1.5;
     margin-bottom: 4rem;
     color: #9698a6; }
     @media (min-width: 900px) {
       .hero__text {
-        text-align: center; } }
+        line-height: 1.2; } }
+    @media (min-width: 1200px) {
+      .hero__text {
+        text-align: center;
+        line-height: 1.5; } }
   .hero__left {
     flex: 1;
     display: flex;
@@ -147,6 +163,10 @@ body {
     width: 100%;
     margin-top: -9rem; }
     @media (min-width: 900px) {
+      .hero__container {
+        margin-top: 10rem;
+        width: 70%; } }
+    @media (min-width: 1200px) {
       .hero__container {
         margin-top: 12rem;
         width: 60%; } }
@@ -182,75 +202,81 @@ body {
   margin-bottom: 8rem; }
   @media (min-width: 900px) {
     .second {
+      margin-top: -12rem; } }
+  @media (min-width: 1200px) {
+    .second {
       margin-top: -28rem; } }
   .second__headline {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2.2rem;
     font-weight: 400;
-    font-size: 3.7rem;
-    margin-bottom: 2.2rem; }
-    @media (min-width: 900px) {
-      .second__headline {
-        text-align: center;
-        width: 80%;
-        margin: auto;
-        margin-bottom: 2.2rem; } }
+    font-size: 3.7rem; }
   .second__text {
-    width: 60%;
+    width: 80%;
+    margin: auto;
     line-height: 1.7;
-    margin-bottom: 4rem;
+    text-align: center;
     color: #9698a6; }
     @media (min-width: 900px) {
       .second__text {
-        width: 80%;
-        margin: auto;
-        margin-bottom: 4rem; } }
+        width: 60%;
+        margin-bottom: 2rem; } }
 
 .row {
   display: block; }
   @media (min-width: 900px) {
     .row {
-      display: flex; } }
+      display: flex;
+      width: 90%;
+      margin: auto;
+      max-width: 1400px; } }
 
 .card {
-  padding: 3rem 2rem; }
+  padding: 3rem 2rem;
+  text-align: center; }
   .card__image {
     width: 7.7rem;
-    margin-bottom: 4rem; }
+    margin-bottom: 1rem; }
     @media (min-width: 900px) {
       .card__image {
-        margin-bottom: 1rem; } }
+        margin-bottom: 4rem; } }
   .card__title {
     margin-bottom: 3rem;
     font-weight: 400;
     font-size: 2.4rem; }
   .card__details {
     color: #9698a6;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     font-weight: 400;
     font-size: 1.7rem;
     line-height: 1.4; }
     @media (min-width: 900px) {
       .card__details {
-        margin-bottom: 0; } }
+        margin-bottom: 2rem; } }
   @media (min-width: 900px) {
     .card {
       width: 100%;
-      margin: auto;
       margin-bottom: 3rem;
-      text-align: center;
       padding: 1rem 0; } }
 
 .articles {
   display: block;
   margin-bottom: 16rem; }
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
     .articles {
+      width: 90%;
+      margin: auto;
       display: flex;
-      margin-bottom: 6rem; } }
+      margin-bottom: 6rem;
+      max-width: 1400px; } }
 
 .articles-headline {
   font-size: 3.8rem;
   font-weight: 400;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  text-align: center; }
   @media (min-width: 900px) {
     .articles-headline {
       width: 80%;
@@ -260,9 +286,19 @@ body {
 .article {
   background-color: white;
   color: #9698a6;
-  border-radius: 10px; }
-  .article:not(:last-child) {
-    margin-right: 3rem; }
+  border-radius: 10px;
+  margin-bottom: 6rem; }
+  @media (min-width: 600px) {
+    .article {
+      max-width: 425px;
+      margin: auto;
+      margin-bottom: 6rem; } }
+  @media (min-width: 900px) {
+    .article {
+      margin-bottom: 6rem; } }
+  @media (min-width: 1200px) {
+    .article:not(:last-child) {
+      margin-right: 3rem; } }
   .article__image {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -289,7 +325,7 @@ body {
     .article {
       width: 80%;
       margin: auto;
-      margin-bottom: 6rem; } }
+      margin-bottom: 3rem; } }
 
 .footer {
   background-color: #2d314d;
@@ -297,22 +333,24 @@ body {
   padding: 5rem 0; }
 
 .footer-container {
+  width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center; }
   @media (min-width: 900px) {
     .footer-container {
-      justify-content: space-between; } }
+      justify-content: space-between;
+      flex-direction: row; } }
 
-.footer-items li:not(:last-child) {
-  margin-bottom: 2rem; }
-
-.footer-items li:hover {
-  color: #31d35c; }
-
-@media (min-width: 900px) {
-  .footer-items li {
-    margin-bottom: 3rem; } }
+.footer-items li {
+  margin-bottom: 3rem;
+  text-align: center; }
+  .footer-items li:hover {
+    color: #31d35c; }
+  @media (min-width: 900px) {
+    .footer-items li:not(:last-child) {
+      margin-bottom: 2rem; } }
 
 .column-footer {
   display: flex;
@@ -323,10 +361,14 @@ body {
   margin-bottom: 3rem; }
 
 .footer-logo {
-  width: 15rem; }
+  width: 15rem;
+  margin-bottom: 2rem; }
   @media (min-width: 900px) {
     .footer-logo {
       margin-bottom: 2rem; } }
+
+.social {
+  margin-bottom: 2rem; }
 
 ion-icon {
   font-size: 25px;
